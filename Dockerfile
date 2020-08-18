@@ -21,6 +21,7 @@ RUN systemctl enable nginx
 RUN systemctl enable mysqld
 RUN systemctl enable redis
 RUN systemctl enable php-fpm
+RUN echo "NETWORKING=yes" > /etc/sysconfig/network
 
 
 VOLUME ["/var/lib/mysql"]
