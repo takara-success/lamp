@@ -7,4 +7,9 @@ services:
     container_name: lamp
     hostname: lamp
     volumes:
-      - "./mysql:/var/lib/mysql"
+      - "mysql:/var/lib/mysql"
+
+# docker volume create mysql
+volumes:
+  mysql:
+    external: true
