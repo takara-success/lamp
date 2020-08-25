@@ -24,6 +24,7 @@ RUN systemctl enable php-fpm
 RUN echo "NETWORKING=yes" > /etc/sysconfig/network
 RUN yum -y reinstall glibc-common
 RUN localedef -f UTF-8 -i ja_JP ja_JP
+RUN ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
 VOLUME ["/var/lib/mysql"]
 
