@@ -2,7 +2,7 @@ version: "3.8"
 services:
   api:
     build: .
-    image: lamp
+    image: lamp:mysql56
     privileged: true
     container_name: lamp
     hostname: lamp
