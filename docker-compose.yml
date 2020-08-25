@@ -2,9 +2,14 @@ version: "3.8"
 services:
   api:
     build: .
-    image: lamp:mysql56
+    image: takarasuccess/lamp:mysql56
     privileged: true
     container_name: lamp
     hostname: lamp
     volumes:
-      - "./mysql:/var/lib/mysql"
+      - "mysql56:/var/lib/mysql"
+
+# docker volume create mysql56
+volumes:
+  mysql56:
+    external: true
