@@ -10,7 +10,8 @@ RUN rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
 RUN yum -y install --enablerepo=remi,remi-php72 php php-devel php-bcmath php-gd php-mbstring php-mcrypt php-mysqli php-pdo php-pear \
 	php-pecl-amqp php-pecl-apcu php-pecl-apcu-devel php-pecl-memcache php-pecl-redis php-pecl-zip php-process php-fpm php-opcache
 # mysql
-RUN yum -y localinstall http://dev.mysql.com/get/mysql57-community-release-el6-7.noarch.rpm
+RUN yum -y localinstall https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+
 RUN yum -y install wget yum-utils
 RUN yum-config-manager --disable mysql57-community
 RUN yum-config-manager --enable mysql56-community
