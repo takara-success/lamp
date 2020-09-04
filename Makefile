@@ -1,5 +1,6 @@
-NAME=lamp
-VERSION=1.0
+NAME=takarasuccess/lamp
+CONTAINER_NAME=lamp
+VERSION=latest
 #USER=takara
 #attach_cmd=su - $(USER)
 DOCKER_RUN_OPTIONS= \
