@@ -28,6 +28,11 @@ RUN echo "NETWORKING=yes" > /etc/sysconfig/network
 RUN yum -y reinstall glibc-common
 RUN localedef -f UTF-8 -i ja_JP ja_JP
 RUN ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
+ADD asset/git-2.29.2.tar.gz /root
+WORKDIR /root/git-2.29.2/
+RUN yum -y install curl-devel
+RUN yum -y install expat-devel
+RUN make prefix=/ install
 
 
 VOLUME ["/var/lib/mysql"]
